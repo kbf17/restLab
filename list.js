@@ -1,30 +1,52 @@
-document.addEventListener('DOMContentLoaded', getSub);
 
+$.ajax({
+    type: 'GET',
+    url: 'https://www.reddit.com/r/ImaginaryOoo/.json',
+    success:    function(success){
+                    $.each(success.data.children, function(){
+  
+                        if(i < 26){
+                            i++;
+                            var post = success.data.children[i].data.url;
+                            var title = success.data.children[i].data.title;
+                            var titles = $('<h3></h3>');                        
+                            var img = $('<img>');
+                            titles.append(title);
+                            img.attr('src', post);
+                            titles.appendTo($('#pictures'));
+                            img.appendTo($('#pictures'));
+                            
+                        
+                        } else{
+                            return;
+                        }
+                    })
+                    console.log('success');
+                    console.log(success);
+                    console.log(success.data.children);
+                }
 
-function getSub(){
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myObj = JSON.parse();
-            console.log('yay');
-        }
-    };
-    xhttp.open("GET", "https://www.reddit.com/r/totallynotrobots/.json", true);
-    xhttp.send();
-};
+})
 
-
-
-
+var i = -1;
 
 
 // $(document).ready(function () {
 //     var jsonURL = "https://www.reddit.com/r/totallynotrobots/.json";
 //     $.getJSON(jsonURL, function (json){
-//         var imgList= "";
-//         $.each(json.url, function () {
-//             imgList += '<li><img src= "' + this.imgPath + '"></li>';
-//         });
-//         $('div.pictures').append(imgList);
-//     });
-// });
+//         // $.each(success.data.children, function(){
+//         //     $('body').append($('<h3></h3>')).append(all.data.title);
+//         //     $('body').append($('<div></div>')).append(all.data.url);
+//         // })
+//         console.log(json);
+//         console.log(json.data);
+//         var all = json.data.children
+//         console.log(all.data.title);
+
+    
+//     })
+
+
+
+// })
+
