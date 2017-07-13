@@ -1,3 +1,6 @@
+various code that didn't work
+
+
 // document.addEventListener('DOMContentLoaded', getSub);
 
 
@@ -52,3 +55,27 @@
     jsonURL = jsonURL.replace(/[\u0000-\u0019]+/g,"");
 
     JSON.parse(jsonURL);
+
+
+// $(document).ready(function () {
+//     var jsonURL = "https://www.reddit.com/r/totallynotrobots/.json";
+//     $.getJSON(jsonURL, function (json){
+//         // $.each(success.data.children, function(){
+//         //     $('body').append($('<h3></h3>')).append(all.data.title);
+//         //     $('body').append($('<div></div>')).append(all.data.url);
+//         // })
+//         console.log(json);
+//         console.log(json.data);
+//         var all = json.data.children
+//         console.log(all.data.title);
+
+    
+//     })
+
+
+
+// })
+
+
+function formatSrc(url) {
+}

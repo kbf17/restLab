@@ -1,4 +1,19 @@
-h3 {
+ html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: url(https://people.ucsc.edu/~ffriesen/sword.png), auto; 
+}
+body:before { /*sudo class creates layer behind body */
+    background-image: url(http://www.adventuretimehistory.com/wp-content/uploads/2016/04/50-1200x675.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: block; content:""; position: fixed; z-index:-1;
+    top:0; left: 0; right: 0; height: 100%;
+    opacity:.3;
+}  
+
+h1, h3 {
     margin: 0 auto;
     color: green;
     text-align: center;
@@ -10,6 +25,13 @@ h3 {
     display: block;
 }
 
+.jumbotron {
+    background-image: url('http://vignette1.wikia.nocookie.net/adventuretimewithfinnandjake/images/6/6f/Adventure_Time_logo.png/revision/latest?cb=20160429213550');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 600px;
+    background-color: transparent;
+}
 .center {
     margin: 15px auto;
     text-align: center;
@@ -17,13 +39,46 @@ h3 {
 
 .antic {
     font-family: 'Antic Slab', serif;
+    font-size: 55px;
 }
 
 .oswald {
-font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    padding: 10px;
 }
 
 img {
-height: 100px;
-width: 100px;
+    margin: auto;
+    margin-bottom: 3em;
+    display: block;
+    height: 200px;
+    width: 150px;
+}
+
+#caption{
+    text-align: center;
+    padding: 10px;
+}
+
+#content{
+    margin: auto;
+    display: block;
+    height: 60em;
+    width: 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#hidden{
+    text-align: center;
+    font-size: x-large;
+    display: block;
+
+}
+
+.hide{
+    visibility: 0;
 }
