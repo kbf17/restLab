@@ -1,5 +1,6 @@
 var search = location.search.substring(1);
 var query = JSON.parse('{"' + decodeURI(search).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g,'":"') + '"}');
+console.log(query)
 $.ajax({
     type: 'GET',
     url: query.url + '.json',
